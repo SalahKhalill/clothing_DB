@@ -1,0 +1,17 @@
+{
+  "name": "clothing-store",
+  "version": "1.0.0",
+  "description": "A full-stack e-commerce application for a clothing store using React.js, Express.js, and PostgreSQL.",
+  "main": "index.js",
+  "scripts": {
+    "client": "npm start --prefix client",
+    "server": "npm start --prefix server",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "npm run build --prefix client"
+  },
+  "dependencies": {
+    "concurrently": "^6.5.1"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}
