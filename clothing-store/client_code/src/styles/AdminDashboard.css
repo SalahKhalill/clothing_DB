@@ -1,0 +1,325 @@
+/* Admin Dashboard Layout */
+.admin-dashboard {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.admin-sidebar {
+  background-color: #343a40;
+  color: white;
+  padding: 20px;
+  width: 100%;
+}
+
+.admin-logo {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.admin-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.nav-link {
+  background-color: transparent;
+  border: none;
+  color: #ccc;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 15px;
+  text-align: center;
+  border-radius: 4px;
+  flex: 1;
+  min-width: 120px;
+  max-width: 150px;
+}
+
+.nav-link.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.admin-content {
+  flex: 1;
+  padding: 15px;
+  background-color: #f8f9fa;
+}
+
+/* Admin Sections */
+.admin-section {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.add-button {
+  background-color: #2a9d8f;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px;
+  align-self: flex-start;
+}
+
+/* Products Grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+/* Product Card */
+.product-card {
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: white;
+}
+
+.product-image-container {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  background-color: #f8f9fa;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 10px;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 15px;
+}
+
+.product-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+}
+
+.product-category {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0 0 15px 0;
+}
+
+.product-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.edit-button {
+  background-color: #457b9d;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.delete-button {
+  background-color: #e63946;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+/* Messages */
+.loading, .error, .empty-message {
+  color: #666;
+  font-size: 1.1rem;
+  padding: 40px;
+  text-align: center;
+}
+
+.error {
+  color: #e63946;
+}
+
+.loading-screen {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Responsive Layout */
+@media (min-width: 576px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .section-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .admin-dashboard {
+    flex-direction: row;
+  }
+  
+  .admin-sidebar {
+    width: 250px;
+  }
+  
+  .admin-nav {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .nav-link {
+    max-width: none;
+    text-align: left;
+  }
+  
+  .admin-content {
+    padding: 30px;
+  }
+  
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .products-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Add coupon management styles */
+
+/* Form styles */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-input {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.submit-button {
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px;
+}
+
+.submit-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.cancel-button {
+  background-color: #6c757d;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px;
+}
+
+/* Coupon styles */
+.coupon-form {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  max-width: 100%;
+  padding: 20px;
+}
+
+.coupon-list {
+  margin-top: 20px;
+}
+
+.responsive-table {
+  overflow-x: auto;
+}
+
+.coupon-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.coupon-table th, 
+.coupon-table td {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.coupon-table th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+.status-active {
+  color: #28a745;
+}
+
+.status-expired {
+  color: #dc3545;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+@media (min-width: 768px) {
+  .coupon-form {
+    max-width: 600px;
+  }
+} 
